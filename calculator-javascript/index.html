@@ -1,0 +1,106 @@
+<html>
+	<head>
+		<title>Calculator</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link  rel = "stylesheet"  type = "text/css" href = "https://fonts.googleapis.com/css?family=Orbitron">
+	</head>
+	<body>
+	<form name = "calc">
+		<input type = "text" name = "b1" placeholder='0' onfocus="this.placeholder=''" onblur="this.placeholder='0'">
+		<hr>
+		<input type = "button" class="col" value = "C" onclick = "btn()">
+		<input type = "button" class="col4" value = "DEL" onclick = "btn20()">
+		<input type = "button" class="col3" value = "OFF">
+		<input type = "button" class="col3" value = "ON"><br>
+		<input type = "button" class="col1" value = "7" onclick = "btn1()">
+		<input type = "button" class="col1" value = "8" onclick = "btn2()">
+		<input type = "button" class="col1" value = "9" onclick = "btn3()">
+		<input type = "button" class="col2" value = "+" onclick = "btn4()"><br>
+		<input type = "button" class="col1"  value = "4" onclick = "btn5()">
+		<input type = "button" class="col1" value = "5" onclick = "btn6()">
+		<input type = "button" class="col1" value = "6" onclick = "btn7()">
+		<input type = "button" class="col2" value = "-" onclick = "btn8()"><br>
+		<input type = "button" class="col1" value = "1" onclick = "btn9()">
+		<input type = "button" class="col1" value = "2" onclick = "btn10()">
+		<input type = "button" class="col1" value = "3" onclick = "btn11()">
+		<input type = "button" class="col2" value = "*" onclick = "btn12()"><br>
+		<input type = "button" class="col1" value = "0" onclick = "btn13()">
+		<input type = "button" class="col1" value = "00" onclick = "btn14()">
+		<input type = "button" class="col2" value = "." onclick = "btn15()">
+		<input type = "button" class="col2" value = "/" onclick = "btn16()"><br>
+		<input type = "button" class="col5" value = "M+" onclick='btn21("not defined")'>
+		<input type = "button" class="col2" value = "&radic;" onclick = "btn17()">
+		<input type = "button" class="col2" value = "%" onclick = "btn18()">
+		<input type = "button" class="col4" value = "=" onclick = "btn19()">
+	</form>
+	<script>
+	 
+		function btn(){
+			document.calc.b1.value = '';
+		}
+		function btn1(){
+			document.calc.b1.value += '7';
+		}
+		function btn2(){
+			document.calc.b1.value += '8';
+		}
+		function btn3(){
+			document.calc.b1.value += '9';
+		}
+		function btn4(){
+			document.calc.b1.value += '+';
+		}
+		function btn5(){
+			document.calc.b1.value += '4';
+		}
+		function btn6(){
+			document.calc.b1.value += '5';
+		}
+		function btn7(){
+			document.calc.b1.value += '6';
+		}
+		function btn8(){
+			document.calc.b1.value += '-';
+		}
+		function btn9(){
+			document.calc.b1.value += '1';
+		}
+		function btn10(){
+			document.calc.b1.value += '2';
+		}
+		function btn11(){
+			document.calc.b1.value += '3';
+		}
+		function btn12(){
+			document.calc.b1.value += '*';
+		}
+		function btn13(){
+			document.calc.b1.value += '0';
+		}
+		function btn14(){
+			document.calc.b1.value += '00';
+		}
+		function btn15(){
+			document.calc.b1.value += '.';
+		}
+		function btn16(){
+			document.calc.b1.value += '/';
+		}
+		function btn17(){
+			document.calc.b1.value = Math.sqrt(document.calc.b1.value);
+		}
+		function btn18(){
+			document.calc.b1.value = document.calc.b1.value/100;
+		}
+		function btn19(){
+			document.calc.b1.value = eval(calc.b1.value);
+		}
+		function btn20(){
+			document.calc.b1.value = document.calc.b1.value.slice(0, -1);
+		}
+		function btn21(){
+			document.calc.b1.value = eval(calc.b1.value);
+		}
+		</script>
+	</body>
+</html>
